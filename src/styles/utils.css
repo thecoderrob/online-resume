@@ -11,21 +11,6 @@
   border: 0;
 }
 
-.mobile-nav-toggle {
-  display: block;
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  width: 1.5rem;
-  aspect-ratio: 1;
-  border: 0;
-  background: transparent;
-  background-image: url(./assets/icon-hamburger.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-
 .gradient-text {
   background: linear-gradient(var(--clr-accent-400), var(--clr-accent-300));
   background-clip: text;
