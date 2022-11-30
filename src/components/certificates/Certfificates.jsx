@@ -12,7 +12,7 @@ const Certfificates = () => {
 
       <div className="grid--certificates | grid">
         {certificates.map((cert) => {
-          const { id, title, subtitle, logo } = cert;
+          const { id, title, subtitle, link, logo } = cert;
 
           return (
             <div className="card--certificate | card grid" key={id}>
@@ -25,7 +25,7 @@ const Certfificates = () => {
                 <h3 className="fs-700 title-medium">{title}</h3>
                 <p>{subtitle}</p>
               </div>
-              <a href="#" className="certificate__link">
+              <a href={link} target="_blank" className="certificate__link">
                 Verify <i class="uil uil-arrow-right"></i>
               </a>
             </div>
