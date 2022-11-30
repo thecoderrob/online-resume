@@ -1,23 +1,33 @@
 import React from "react";
 import imgHome from "../../assets/img-home-sq.jpg";
 
-const Home = () => {
+const Home = ({ setActiveLink }) => {
   return (
     <section className="section--home" id="home">
       <article className="container grid">
         <img src={imgHome} alt="" className="home__img" />
 
         <div className="home__text | flow">
-          <h1 className="home__title | fs-900 title-bold">Robin Regodon</h1>
-          <p className="home__subtitle | flex fs-700 text-neutral-800">
-            Web Developer
-          </p>
+          <div className="home__header">
+            <h1 className="home__title | fs-900 title-bold">Robin Regodon</h1>
+            <p className="home__subtitle | flex fs-700 text-neutral-800">
+              Web Developer
+            </p>
+          </div>
           <p className="home__copy">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Consequatur accusamus sapiente error libero eaque veniam at nihil
-            maiores adipisci eligendi.
+            I am a professional web developer with 2 years of work experience. I
+            am curious about web development and try to learn more about it by{" "}
+            <a href="#certificates" className="title-medium">
+              taking online courses
+            </a>
+            , watching YouTube videos, and reading blogs. My goal is to build
+            projects that will have a positive impact on its users.
           </p>
-          <a href="#contact" className="cta cta--big cta--dark">
+          <a
+            href="#contact"
+            className="cta cta--big cta--dark"
+            onClick={() => setActiveLink(6)}
+          >
             Say Hello <i className="uil uil-message cta__icon"></i>
           </a>
         </div>

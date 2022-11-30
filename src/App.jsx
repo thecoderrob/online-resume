@@ -18,7 +18,7 @@ const App = () => {
       <Header activeLink={activeLink} setActiveLink={setActiveLink} />
 
       <main>
-        <Home />
+        <Home setActiveLink={setActiveLink} />
         <Skills />
         <Experience />
         <Portfolio />

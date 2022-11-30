@@ -8,7 +8,7 @@ const Header = ({ activeLink, setActiveLink }) => {
   return (
     <header className="primary-header">
       <nav className="nav | flex container">
-        <a href="#" className="nav__logo">
+        <a href="#home" className="nav__logo" onClick={() => setActiveLink(1)}>
           Regodon
         </a>
 

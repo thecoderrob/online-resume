@@ -10,13 +10,19 @@
       justify-self: center;
       max-width: 300px;
       aspect-ratio: 1;
+      box-shadow: var(--shadow-card);
       animation: blob 8s ease-in-out infinite 1s;
+    }
+
+    & .home__text {
+      --flow-gap: var(--space-500);
     }
 
     & .home__subtitle {
       position: relative;
       align-items: center;
       padding-left: var(--space-constant-800);
+      margin-top: var(--space-constant-100);
 
       &::before {
         content: "";
