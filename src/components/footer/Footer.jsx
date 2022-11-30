@@ -5,7 +5,11 @@ import { socials } from "../../constants";
 const Footer = ({ setActiveLink }) => {
   return (
     <footer className="center | flow">
-      <a href="#" className="footer__logo | fs-900 title-bold">
+      <a
+        href="#home"
+        className="footer__logo | fs-900 title-bold"
+        onClick={() => setActiveLink(1)}
+      >
         Regodon
       </a>
       <div className="footer__socials | flex">
