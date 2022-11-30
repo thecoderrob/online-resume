@@ -4,24 +4,19 @@
   align-items: center;
 
   & article {
-    & {
-      width: 100%;
-    }
+    width: 100%;
 
     & .home__img {
       justify-self: center;
       max-width: 300px;
       aspect-ratio: 1;
-      box-shadow: 0px 5px 5px rgb(0 0 0 / 0.25);
       animation: blob 8s ease-in-out infinite 1s;
     }
 
     & .home__subtitle {
       position: relative;
-      display: flex;
       align-items: center;
-      padding-left: 5rem;
-      color: var(--clr-neutral-800);
+      padding-left: var(--space-constant-800);
 
       &::before {
         content: "";
@@ -51,6 +46,7 @@
   }
 }
 
+/* Animation */
 @keyframes blob {
   0% {
     border-radius: 60% 55% 45% 70%/60% 45% 70% 55%;

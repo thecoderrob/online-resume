@@ -1,19 +1,30 @@
 import React, { useState } from "react";
 
-import Education from "./Education";
-import Work from "./Work";
+import Exp from "./Exp";
+
+import { education, workExperience } from "../../constants";
 
 const Experience = () => {
-  const [activeExperience, setActiveExperience] = useState("work");
+  const [activeLabel, setActiveLabel] = useState(1);
+  const [activeData, setActiveData] = useState(workExperience);
+
+  const handleData = (label) => {
+    setActiveLabel(label);
+    if (label == 0) {
+      setActiveData(education);
+    } else {
+      setActiveData(workExperience);
+    }
+  };
 
   return (
     <section className="section--experience | container" id="experience">
       <div className="section__title | flow">
         <h2 className="fs-800 title-bold center">
-          {activeExperience == "education" ? "Education" : "Work"}
+          {activeLabel == 0 ? "Education" : "Work"}
         </h2>
         <p className="center">
-          {activeExperience == "education"
+          {activeLabel == 0
             ? "My educational background"
             : "My work experience"}
         </p>
@@ -21,26 +32,27 @@ const Experience = () => {
 
       <div className="experience__toggler-group | flex">
         <button
-          className={`experience__toggler ${
-            activeExperience == "education" ? "active-experience" : ""
+          className={`cta cta--light cta--small ${
+            activeLabel == 0 ? "active-cta--light" : ""
           }`}
-          onClick={() => setActiveExperience("education")}
+          onClick={() => handleData(0)}
         >
           <i className="uil uil-graduation-cap"></i> Education
         </button>
         <button
-          className={`experience__toggler ${
-            activeExperience == "work" ? "active-experience" : ""
+          className={`cta cta--light cta--small ${
+            activeLabel == 1 ? "active-cta--light" : ""
           }`}
-          onClick={() => setActiveExperience("work")}
+          onClick={() => handleData(1)}
         >
           <i className="uil uil-building"></i> Work
         </button>
       </div>
 
-      <div className="experience">
-        {activeExperience == "education" && <Education />}
-        {activeExperience == "work" && <Work />}
+      <div className="experience-timeline">
+        {activeData.map((data) => {
+          return <Exp key={data.id} {...data} />;
+        })}
       </div>
     </section>
   );

@@ -1,15 +1,11 @@
 .skill {
-  --flex-gap: 0.5rem;
-  --flow-gap: 0.25rem;
-
-  & .skill__icon {
-    color: var(--clr-neutral-800);
-  }
+  --flex-gap: var(--space-constant-100);
+  --flow-gap: var(--space-constant-100);
 }
 
 .card--skills {
   & .card__title {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-constant-400);
   }
 }
 
@@ -18,13 +14,13 @@
   margin-inline: auto;
 
   @media (min-width: 45em) {
-    --grid-gap: 2rem;
+    --grid-gap: var(--space-constant-400);
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 .grid--skill {
-  --grid-gap: 1.5rem;
+  --grid-gap: var(--space-constant-400);
   max-width: 20em;
   margin-inline: auto;
   grid-template-columns: repeat(2, 1fr);

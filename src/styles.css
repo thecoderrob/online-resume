@@ -9,6 +9,8 @@
 @import "./styles/colors.css";
 
 /* Components */
+@import "./styles/cta.css";
+
 @import "./components/header/header.css";
 @import "./components/home/home.css";
 @import "./components/skills/skills.css";

@@ -9,13 +9,15 @@ const Home = () => {
 
         <div className="home__text | flow">
           <h1 className="home__title | fs-900 title-bold">Robin Regodon</h1>
-          <p className="home__subtitle | fs-700">Web Developer</p>
+          <p className="home__subtitle | flex fs-700 text-neutral-800">
+            Web Developer
+          </p>
           <p className="home__copy">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Consequatur accusamus sapiente error libero eaque veniam at nihil
             maiores adipisci eligendi.
           </p>
-          <a href="#contact" className="cta">
+          <a href="#contact" className="cta cta--big cta--dark">
             Say Hello <i className="uil uil-message cta__icon"></i>
           </a>
         </div>

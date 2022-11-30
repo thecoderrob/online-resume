@@ -2,24 +2,8 @@
   justify-content: center;
 }
 
-.portfolio__toggler {
-  font-weight: var(--fw-medium);
-  padding: 0.5rem 1rem;
-  border: 0;
-  border-radius: 0.5rem;
-  background: transparent;
-  cursor: pointer;
-  transition: 250ms ease-in-out;
-}
-
-.active-portfolio,
-.portfolio__toggler:where(:hover, :focus-visible) {
-  background: var(--clr-neutral-800);
-  color: var(--clr-neutral-200);
-}
-
 .grid--portfolio {
-  padding-top: 1.5rem;
+  padding-top: var(--space-constant-400);
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
 }
 
@@ -29,30 +13,18 @@
 
     & .card__img {
       aspect-ratio: 1600/900;
+      transition: var(--ts-speed-400);
     }
   }
 
-  & .card__title {
-    margin-top: 1.5rem;
+  &:hover .card__img,
+  &:focus-visible .card__img {
+    scale: 1.05;
   }
 
   & .card__footer {
-    --flex-gap: 1rem;
+    --flex-gap: var(--space-constant-300);
     align-items: center;
-    & .project__repo,
-    & .project__site {
-      color: var(--clr-neutral-400);
-      transition: 250ms ease-in-out;
-    }
-
-    & .project__repo:where(:hover, :focus-visible),
-    & .project__site:where(:hover, :focus-visible) {
-      color: var(--clr-neutral-800);
-
-      & i {
-        margin-left: 3px;
-        transition: 250ms ease-in-out;
-      }
-    }
+    align-self: end;
   }
 }

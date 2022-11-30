@@ -17,7 +17,7 @@ const Footer = ({ setActiveLink }) => {
           const { id, icon, link } = social;
 
           return (
-            <a href={link} target="_blank" className="footer__social">
+            <a href={link} target="_blank" className="cta cta--small cta--dark">
               <i className={`${icon} footer__social-icon`}></i>
             </a>
           );
@@ -28,7 +28,7 @@ const Footer = ({ setActiveLink }) => {
 
       <a
         href="#home"
-        className="back-to-top fs-700"
+        className="cta cta--small cta--dark fs-700"
         onClick={() => setActiveLink(1)}
       >
         <i class="uil uil-arrow-up"></i>

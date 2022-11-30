@@ -1,19 +1,21 @@
 .flex {
   display: flex;
-  gap: var(--flex-gap, 1.5rem);
+  gap: var(--flex-gap, var(--space-400));
 }
 
 .grid {
   display: grid;
-  gap: var(--grid-gap, 1.5rem);
+  gap: var(--grid-gap, var(--space-400));
 }
 
 .flow > *:where(:not(:first-child)) {
-  margin-top: var(--flow-gap, 1.5rem);
+  margin-top: var(--flow-gap, var(--space-400));
 }
 
 .container {
-  padding: var(--padding);
+  --containerMaxWidth: 70em;
+
+  padding: var(--space-400);
   max-width: var(--containerMaxWidth);
   margin-inline: auto;
   /* border: 1px solid blue; */

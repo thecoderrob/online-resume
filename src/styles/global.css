@@ -1,4 +1,8 @@
 :root {
+  scroll-behavior: smooth;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
   /* ========= Colors ========== */
   --hue: 0;
   --saturation: 0%;
@@ -9,6 +13,7 @@
   --clr-neutral-200: hsl(var(--hue), var(--saturation), 98%);
   --clr-neutral-100: hsl(0 0% 100%);
 
+  /* ========= Typography ========= */
   --ff-primary: "DM Sans", sans-serif;
 
   --fw-reg: 400;
@@ -22,13 +27,38 @@
   --fs-400: 0.9375rem;
   --fs-300: 0.875rem;
 
-  --containerMaxWidth: 70em;
+  /* ========= Spacing ========= */
 
-  --padding: clamp(1rem, 1.5vw, 1.5rem);
+  --space-900: clamp(3rem, 6vw, 6rem);
+  --space-800: clamp(2.5rem, 5vw, 5rem);
+  --space-700: clamp(2rem, 4vw, 4rem);
+  --space-500: clamp(1rem, 2vw, 2rem);
+  --space-400: clamp(0.75rem, 1.5vw, 1.5rem);
 
-  scroll-behavior: smooth;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  --space-constant-900: 6rem;
+  --space-constant-800: 5rem;
+  --space-constant-700: 4rem;
+  --space-constant-600: 3rem;
+  --space-constant-500: 2rem;
+  --space-constant-400: 1.5rem;
+  --space-constant-300: 1rem;
+  --space-constant-200: 0.75rem;
+  --space-constant-100: 0.5rem;
+  --space-constant-50: 0.25rem;
+
+  /* ========= z-index ========= */
+  --stack-3: 100;
+  --stack-2: 10;
+  --stack-1: 1;
+
+  /* ========= Transition ========= */
+  --ts-type: ease-in-out;
+
+  --ts-speed-400: 250ms var(--ts-type);
+
+  /* ========= Shadows ========= */
+  --shadow-nav: 0px -3px 10px -3px rgb(0 0 0 / 0.25);
+  --shadow-card: 0px 3px 10px -3px rgb(0 0 0 / 0.25);
 }
 
 @media (min-width: 45em) {
@@ -55,37 +85,25 @@ body {
   line-height: 1.6;
 }
 
+button {
+  cursor: pointer;
+}
+
 section {
   &:not(.section--home) {
-    padding-bottom: 4rem;
+    padding-block: var(--space-900);
   }
 }
 
 .section__title {
-  --flow-gap: 0.75rem;
-  padding-bottom: var(--padding);
+  --flow-gap: var(--space-constant-100);
+  padding-bottom: var(--space-900);
 }
 
 /* Components */
 .card {
-  padding: var(--padding);
+  padding: var(--space-constant-400);
   background-color: var(--clr-neutral-100);
   border-radius: 0.5rem;
-}
-
-.cta {
-  text-decoration: none;
-  display: inline-block;
-  font-weight: var(--fw-bold);
-  padding: 1rem 2rem;
-  color: var(--clr-neutral-200);
-  background-color: var(--clr-neutral-800);
-  border: 0;
-  border-radius: 1rem;
-  cursor: pointer;
-}
-
-.cta--small {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  box-shadow: var(--shadow-card);
 }

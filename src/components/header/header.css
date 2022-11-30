@@ -1,6 +1,6 @@
 .primary-header {
   position: fixed;
-  z-index: 100;
+  z-index: var(--stack-3);
   left: 0;
   right: 0;
   background-color: var(--clr-neutral-200);
@@ -17,7 +17,6 @@
 
   & .nav__logo,
   & .nav__link {
-    text-decoration: none;
     font-weight: var(--fw-medium);
   }
 
@@ -26,40 +25,47 @@
     display: none;
   }
 
-  & .nav__logo {
-    color: var(--clr-neutral-900);
-  }
-
   & .nav__list {
     display: flex;
-    gap: 1.5rem;
+    gap: var(--space-constant-400);
   }
 
   & .nav__link {
     color: var(--clr-neutral-400);
+
+    &:hover,
+    &:focus-visible {
+      color: var(--clr-neutral-800);
+    }
   }
 
-  & .nav__link:where(:hover, :focus-visible),
+  & .nav__logo,
   & .active-link {
-    color: var(--clr-neutral-900);
+    color: var(--clr-neutral-800);
   }
 
   @media (max-width: 44.999em) {
     & .nav__list {
+      /* Position */
       position: fixed;
       left: 0;
       right: 0;
       bottom: -20rem;
-      padding: var(--padding);
-      padding-bottom: 4rem;
+
+      /* Grid */
       display: grid;
-      gap: 1.5rem;
+      gap: var(--space-constant-400);
       grid-template-columns: repeat(3, 1fr);
+
+      /* Shadow */
+      -webkit-box-shadow: var(--shadow-400);
+      -moz-box-shadow: var(--shadow-400);
+      box-shadow: var(--shadow-nav);
+
+      padding: var(--space-400);
+      padding-bottom: var(--space-constant-700);
       background-color: var(--clr-neutral-100);
-      -webkit-box-shadow: 0px -3px 10px -3px rgba(0, 0, 0, 0.25);
-      -moz-box-shadow: 0px -3px 10px -3px rgba(0, 0, 0, 0.25);
-      box-shadow: 0px -3px 10px -3px rgba(0, 0, 0, 0.25);
-      transition: bottom 300ms ease-in-out;
+      transition: bottom var(--ts-speed-400);
 
       &[data-expanded="true"] {
         bottom: 0;
@@ -68,7 +74,7 @@
 
     & .nav__link {
       display: flex;
-      gap: 0.75rem;
+      gap: var(--space-constant-200);
       flex-direction: column;
       align-items: center;
     }
@@ -81,13 +87,12 @@
 
     & .nav__toggle {
       position: absolute;
-      top: var(--padding);
-      right: var(--padding);
+      top: var(--space-400);
+      right: var(--space-400);
       width: 2rem;
       aspect-ratio: 1;
       border: 0;
       background: transparent;
-      cursor: pointer;
     }
   }
 }

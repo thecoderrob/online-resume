@@ -25,7 +25,11 @@ const Certfificates = () => {
                 <h3 className="fs-700 title-medium">{title}</h3>
                 <p>{subtitle}</p>
               </div>
-              <a href={link} target="_blank" className="certificate__link">
+              <a
+                href={link}
+                target="_blank"
+                className="cta cta--xsmall cta--light"
+              >
                 Verify <i class="uil uil-arrow-right"></i>
               </a>
             </div>

@@ -14,8 +14,8 @@ const Portfolio = () => {
 
       <div className="portfolio__selector-group | flex">
         <button
-          className={`portfolio__toggler ${
-            activePortfolio == 0 ? "active-portfolio" : ""
+          className={`cta cta--small cta--light ${
+            activePortfolio == 0 ? "active-cta--light" : ""
           }`}
           onClick={() => setActivePortfolio(0)}
         >
@@ -26,8 +26,8 @@ const Portfolio = () => {
           return (
             <button
               key={id}
-              className={`portfolio__toggler ${
-                activePortfolio == id ? "active-portfolio" : ""
+              className={`cta cta--small cta--light ${
+                activePortfolio == id ? "active-cta--light" : ""
               }`}
               onClick={() => setActivePortfolio(id)}
             >
@@ -37,49 +37,53 @@ const Portfolio = () => {
         })}
       </div>
 
-      {portfolio
-        .filter((p) => {
-          if (activePortfolio == 0) return p;
-          return p.id == activePortfolio;
-        })
-        .map((p) => {
-          const { id, projects } = p;
+      <div className="grid--portfolio | grid">
+        {portfolio
+          .filter((p) => {
+            if (activePortfolio == 0) return p;
+            return p.id == activePortfolio;
+          })
+          .map((p) => {
+            const { projects } = p;
 
-          return (
-            <div className="grid--portfolio grid" key={id}>
-              {projects.map((proj) => {
-                const { id, img, title, siteUrl, githubUrl } = proj;
+            return (
+              <>
+                {projects.map((proj) => {
+                  const { id, img, title, siteUrl, githubUrl } = proj;
 
-                return (
-                  <div className="card--project card" key={id}>
-                    <div className="card__img-wrapper">
-                      <img src={img} alt="" className="card__img" />
+                  return (
+                    <div className="card--project | card grid" key={id}>
+                      <div className="card__img-wrapper">
+                        <img src={img} alt="" className="card__img" />
+                      </div>
+
+                      <h3 className="card__title fs-600 title-medium">
+                        {title}
+                      </h3>
+
+                      <div className="card__footer | flex">
+                        <a
+                          href={githubUrl}
+                          target="_blank"
+                          className="cta cta--xsmall cta--light"
+                        >
+                          Repo
+                        </a>
+                        <a
+                          href={siteUrl}
+                          target="_blank"
+                          className="cta cta--xsmall cta--light"
+                        >
+                          Demo <i className="uil uil-arrow-right"></i>
+                        </a>
+                      </div>
                     </div>
-
-                    <h3 className="card__title fs-600 title-medium">{title}</h3>
-
-                    <div className="card__footer | flex">
-                      <a
-                        href={githubUrl}
-                        target="_blank"
-                        className="project__repo"
-                      >
-                        Repo
-                      </a>
-                      <a
-                        href={siteUrl}
-                        target="_blank"
-                        className="project__site"
-                      >
-                        Demo <i className="uil uil-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          );
-        })}
+                  );
+                })}
+              </>
+            );
+          })}
+      </div>
     </section>
   );
 };
