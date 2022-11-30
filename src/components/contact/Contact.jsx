@@ -16,7 +16,7 @@ const Contact = () => {
             <div className="card--contact | card center" key={id}>
               <i className={`${logo} fs-800 title-medium`}></i>
               <h3 className="fs-700 title-medium">{title}</h3>
-              <p>{data}</p>
+              <p className="fw-medium">{data}</p>
             </div>
           );
         })}

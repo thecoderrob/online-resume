@@ -289,7 +289,7 @@ const contactInfo = [
     id: 1,
     title: "Email",
     logo: "bx bx-mail-send",
-    data: "robinregodon07@gmail.com",
+    data: "rmd.regodon@gmail.com",
   },
   {
     id: 2,
