@@ -56,5 +56,14 @@
   & .experience__summary {
     --flow-gap: var(--space-constant-100);
     margin-top: var(--space-constant-300);
+
+    & .experience__summary__item {
+      --grid-gap: var(--space-constant-100);
+      grid-template-columns: max-content 1fr;
+
+      & > i {
+        padding-top: calc(var(--space-constant-50) + 1px);
+      }
+    }
   }
 }

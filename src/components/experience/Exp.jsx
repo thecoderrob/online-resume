@@ -25,8 +25,9 @@ const Exp = ({
           {list != null &&
             list.map((item) => {
               return (
-                <li className="experience__summary__item">
-                  <i class="bx bxs-check-circle"></i> {item}
+                <li className="experience__summary__item | grid">
+                  <i class="bx bxs-check-circle"></i>
+                  <p>{item}</p>
                 </li>
               );
             })}
