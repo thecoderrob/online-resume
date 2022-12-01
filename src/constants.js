@@ -54,37 +54,37 @@ const skills = [
     tSkills: [
       {
         id: 1,
-        skill: "HTML",
+        skill: "React",
         proficiency: "Intermediate",
       },
       {
         id: 2,
-        skill: "CSS",
-        proficiency: "Intermediate",
-      },
-      {
-        id: 3,
-        skill: "Bootstrap",
-        proficiency: "Basic",
-      },
-      {
-        id: 4,
-        skill: "Tailwind",
-        proficiency: "Basic",
-      },
-      {
-        id: 5,
         skill: "JavaScript",
         proficiency: "Intermediate",
       },
       {
+        id: 3,
+        skill: "HTML",
+        proficiency: "Intermediate",
+      },
+      {
+        id: 4,
+        skill: "CSS",
+        proficiency: "Intermediate",
+      },
+      {
+        id: 5,
+        skill: "Bootstrap",
+        proficiency: "Basic",
+      },
+      {
         id: 6,
-        skill: "React",
+        skill: "Tailwind",
         proficiency: "Basic",
       },
       {
         id: 7,
-        skill: "GitHub",
+        skill: "PostCSS",
         proficiency: "Basic",
       },
       {
@@ -110,12 +110,12 @@ const skills = [
       },
       {
         id: 3,
-        skill: "NodeJS",
+        skill: "MySQL",
         proficiency: "Basic",
       },
       {
         id: 4,
-        skill: "MySQL",
+        skill: "GitHub",
         proficiency: "Basic",
       },
     ],
@@ -127,6 +127,7 @@ const education = [
     id: 1,
     title: "Far Eastern University",
     subtitle: "B.S. Information Technology",
+    list: ["Academic Scholar", "Top Performing IT Student (2015)"],
     dateStart: "2015",
     dateEnd: "2019",
   },
@@ -143,29 +144,36 @@ const workExperience = [
     id: 1,
     title: "VirtuallyinCredible",
     subtitle: "Web Developer",
-    dateStart: "Jun 2019",
+    list: [
+      "Built custom HRIS and Payroll systems",
+      "Managed existing web applications",
+    ],
+    dateStart: "Jun 2020",
     dateEnd: "Sep 2021",
   },
   {
     id: 2,
     title: "Corporate Innovators Baguio, Inc.",
     subtitle: "Web Developer",
-    dateStart: "Jun 2019",
-    dateEnd: "Sep 2021",
+    list: ["Built custom payroll system"],
+    dateStart: "Dec 2019",
+    dateEnd: "Mar 2020",
   },
   {
     id: 3,
     title: "Vertiv Co.",
     subtitle: "IT Intern",
-    dateStart: "Jun 2019",
-    dateEnd: "Sep 2021",
+    list: ["Automated the inventory process using Excel Macro programming"],
+    dateStart: "Apr 2019",
+    dateEnd: "Jul 2019",
   },
   {
     id: 4,
     title: "JG Summit Holdings, Inc.",
     subtitle: "IT Intern",
-    dateStart: "Jun 2019",
-    dateEnd: "Sep 2021",
+    list: ["Automated the data validation process using Python"],
+    dateStart: "Jan 2019",
+    dateEnd: "Mar 2019",
   },
 ];
 
@@ -307,7 +315,7 @@ const contactInfo = [
   },
   {
     id: 3,
-    title: "SMS",
+    title: "Messenger",
     logo: "bx bxl-messenger",
     data: "rdregodon",
   },

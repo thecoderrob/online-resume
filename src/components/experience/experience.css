@@ -22,9 +22,10 @@
   &::before {
     content: "";
     display: block;
+    z-index: var(--stack-2);
     width: 14px;
     aspect-ratio: 1;
-    background-color: var(--clr-neutral-400);
+    background-color: var(--clr-neutral-800);
     border-radius: 50%;
     grid-area: mid;
   }
@@ -35,7 +36,7 @@
     display: block;
     height: 100%;
     width: 1px;
-    background-color: var(--clr-neutral-400);
+    background-color: var(--clr-neutral-300);
     transform: translate(7px, 14px);
     grid-area: mid;
   }
@@ -44,13 +45,16 @@
     grid-area: var(--grid-area);
   }
 
+  & .experience__header {
+    --flow-gap: var(--space-constant-100);
+  }
+
   & .experience__subtitle {
-    margin-top: var(--space-constant-100);
-    font-weight: var(--fw-medium);
     line-height: 1.1;
   }
 
-  & .experience__date {
-    margin-top: var(--space-constant-100);
+  & .experience__summary {
+    --flow-gap: var(--space-constant-100);
+    margin-top: var(--space-constant-300);
   }
 }

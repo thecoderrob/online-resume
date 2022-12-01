@@ -15,13 +15,14 @@ const Home = ({ setActiveLink }) => {
             </p>
           </div>
           <p className="home__copy">
-            I am a professional web developer with 2 years of work experience. I
-            am curious about web development and try to learn more about it by{" "}
+            I am a web developer with 2 years of work experience. I enjoy web
+            development and try to learn more about it by{" "}
             <a href="#certificates" className="title-medium">
               taking online courses
             </a>
-            , watching YouTube videos, and reading blogs. My goal is to build
-            projects that will have a positive impact on its users.
+            , watching YouTube videos and reading blogs. As an employee, I am
+            committed to delivering professional and exceptional services to my
+            clients and employers.
           </p>
           <a
             href="#contact"
