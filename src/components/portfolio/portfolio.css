@@ -13,6 +13,7 @@
 
     & .card__img {
       aspect-ratio: 1600/900;
+      object-fit: cover;
       transition: var(--ts-speed-400);
     }
   }
